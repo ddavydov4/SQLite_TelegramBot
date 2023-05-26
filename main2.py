@@ -32,7 +32,7 @@ conn.commit()
 
 def delete_on_name(name):
     c = conn.cursor()
-    c.execute("""delete from users where name=:name""", {"name": name})
+    c.execute("""delete * from users where name=:name""", {"name": name})
 print(c.fetchall())
 conn.commit()
 
